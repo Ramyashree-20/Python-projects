@@ -13,7 +13,7 @@ print("Word to guess: " + placeholder)
 game_over = False
 correct_letters = []
 while not game_over:
-    print(f"****************************{lives}/6 LIVES LEFT****************************")
+    print(f"************{lives}/6 LIVES LEFT*************")
     guess = input("Guess a letter: ").lower()
     if guess in correct_letters:
         print(f"You've already guessed {guess}")
@@ -32,8 +32,8 @@ while not game_over:
         print(f"You guessed {guess}, that's not in the word. You lose a life.")
         if lives == 0:
             game_over = True
-            print(f"***********************IT WAS {chosen_word}! YOU LOSE**********************")
+            print(f"***************THE ACTUAL WORD IS {chosen_word}! YOU LOSE***************")
     if "_" not in display:
         game_over = True
-        print("****************************YOU WIN****************************")
+        print("************************YOU WIN************************")
     print(stages[lives])
